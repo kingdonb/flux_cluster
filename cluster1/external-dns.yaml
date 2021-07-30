@@ -1,0 +1,14 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+kind: Kustomization
+metadata:
+  name: applications.externaldns
+  namespace: flux-system
+spec:
+  interval: 1m
+  sourceRef:
+    kind: GitRepository
+    name: applications
+  path: ./external-dns
+  prune: false
+  patchesStrategicMerge:
+  - ./custom/external-dns.yaml
