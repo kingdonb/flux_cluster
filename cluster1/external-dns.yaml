@@ -11,4 +11,4 @@ spec:
   path: ./external-dns
   prune: false
   patchesStrategicMerge:
-  - ./custom/external-dns.yaml
+  - ./cluster1/custom/external-dns.yaml
